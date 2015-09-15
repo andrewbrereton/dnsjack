@@ -198,7 +198,7 @@ exports.createServer = function(proxy) {
 		var domain = domainify(query.question.qname);
 		var route;
 
-		that.emit('resolve', domain);
+		that.emit('resolve', domain, rinfo.address);
 
 		var respond = function(buf) {
 			server.send(buf, 0, buf.length, rinfo.port, rinfo.address);
