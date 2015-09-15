@@ -12,5 +12,9 @@
   "contributors": [
     "Andrew Brereton <beredon@gmail.com>"
   ],
-  "repository": "git://github.com/andrewbrereton/dnsjack.git"
+  "repository": "git://github.com/andrewbrereton/dnsjack.git",
+  "dependencies": {
+    "dnscache": "0.0.3",
+    "dnscache-redis": "^1.0.0"
+  }
 }

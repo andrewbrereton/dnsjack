@@ -2,7 +2,7 @@
 
 A simple DNS proxy that lets you intercept domains and route them to whatever IP you decide.
 
-This fork includes the origin IP address.
+This fork includes the origin IP address, as well as using dnscache for caching lookup results.
 
 It's available through npm:
 

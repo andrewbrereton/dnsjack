@@ -2,6 +2,12 @@ var EventEmitter = require('events').EventEmitter;
 var dgram = require('dgram');
 var net = require('net');
 var dns = require('dns');
+var dnscache = require('dnscache')({
+        'enable': true,
+        'ttl': 43200, // 12 hours
+        'cachesize': 8000,
+		'cache': require('dnscache-redis')
+    });
 
 var bitSlice = function(b, offset, length) {
 	return (b >>> (7-(offset+length-1))) & ~(0xff << length);
