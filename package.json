@@ -1,7 +1,7 @@
 {
-  "name": "dnsjack",
+  "name": "dnsjack-with-origin-ip",
   "version": "0.3.0",
-  "description": "A simple DNS proxy that lets you intercept domains and route them to whatever IP you decide",
+  "description": "A simple DNS proxy that lets you intercept domains and route them to whatever IP you decide. This fork includes the origin IP address.",
   "keywords": [
     "dns",
     "proxy",
@@ -9,5 +9,8 @@
     "debug"
   ],
   "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>",
-  "repository": "git://github.com/mafintosh/dnsjack.git"
+  "contributors": [
+     "Andrew Brereton <beredon@gmail.com>"
+  ],
+  "repository": "git://github.com/andrewbrereton/dnsjack.git"
 }

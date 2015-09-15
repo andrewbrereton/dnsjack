@@ -228,7 +228,7 @@ exports.createServer = function(proxy) {
 
 		if (!route) return onproxy();
 
-		route(domain, function(err, to) {
+		route(domain, rinfo.address, function(err, to) {
 			if (err) return onerror(err);
 			if (!to) return onproxy();
 
@@ -238,7 +238,6 @@ exports.createServer = function(proxy) {
 				respond(response(query, numify(addr)));
 			});
 		});
-
 	});
 
 	that.route = function(pattern, route) {
@@ -261,7 +260,7 @@ exports.createServer = function(proxy) {
 		server.bind(port || 53);
 		return that;
 	};
-	
+
 	that.close = function(callback) {
 		server.close(callback);
 		return that;
